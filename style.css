@@ -1,0 +1,349 @@
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Existing CSS */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #fffdfd;
+    padding: 10px 0;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+   
+}
+
+.logo img {
+    width: 150px;
+    margin-left: 1px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Aligns the nav items to the right */
+}
+
+nav ul li {
+    margin-left: 44px;
+    margin-right: 49px;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #464646;
+    font-family: 'Arial', sans-serif;
+    font-weight: bolder;
+    font-size: larger;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+ /*To reduce the opacity of the background image in your #hero section without affecting the text and other content, you can use the method of adding a semi-transparent overlay using the ::before pseudo-element. */
+
+
+
+
+#hero {
+    position: relative; /* Make sure the pseudo-element is positioned correctly */
+    background-image: url('https://img.freepik.com/free-vector/geometric-science-education-background-vector-gradient-blue-digital-remix_53876-125993.jpg?semt=ais_hybrid'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black overlay, adjust opacity as needed */
+    z-index: -1; /* Ensure the overlay stays behind the content */
+}
+
+#hero .hero-content {
+    text-align: center;
+}
+.posterHeading0{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    color:#00cbf9;
+    font-weight: 600;
+}
+
+.posterHeading{
+    color:rgb(255, 251, 10);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+.posterHeading4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:rgb(255, 221, 0);
+}
+.poster{
+    color:#00cbf9;
+}
+.posterHeading2{
+    color:rgb(210, 108, 0);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+}
+
+
+#affiliated-colleges {
+    padding: 50px 0;
+    text-align: center;
+    overflow: hidden; /* Hide overflow to make scrolling look clean */
+}
+
+.collegeScroll {
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(42, 1, 124);
+}
+
+.college-logos {
+    display: flex;
+    justify-content: start;
+    overflow: hidden; /* Hide the excess logos */
+    white-space: nowrap;
+    animation: scroll-left 20s linear infinite; /* Continuous left-to-right scrolling */
+}
+
+.college-logos img {
+    margin: 0 10px;
+    padding: 20px;
+    max-width: 150px;
+}
+
+/* Scroll from right to left with logos appearing immediately on the right */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(-100%); /* Move all logos out of view on the left */
+    }
+}
+
+/* Clone the images to make it appear as if the scrolling is continuous */
+.college-logos {
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.college-logos img {
+    margin: 0 10px;
+    padding: 20px;
+    max-width: 150px;
+}
+
+.college-logos::after {
+    content: ''; /* Create a clone effect */
+    display: inline-block;
+    width: 100%; /* Force the clone to take full width */
+}
+.heading2{
+    margin-left:30px;
+    padding:10px;
+    margin-top: -50px;
+    font-size: 50px;
+    color:rgb(0, 0, 133);
+    margin-top: 10px;
+}
+
+.heading21{
+    margin-left:30px;
+    padding:10px;
+    margin-top: 50px;
+    font-size: 50px;
+    color:rgb(0, 0, 133);
+    margin-top: 20px;
+}
+/*  #experts {
+    padding: 50px 0;
+}
+
+ .expert-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ .profile {
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} */
+
+/* .profile img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+} */
+
+  #container {
+    display: flex;
+    flex-direction:column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px;
+    margin-left: 20px; 
+    margin-right: 20px;
+   
+  }
+  #container .container1{
+    display:flex;
+    flex-direction: row;
+    gap:50px;
+    margin-left: 20px; 
+    margin-right: 20px;
+  }
+  #container .container2{
+    display:flex;
+    flex-direction: row;
+    gap:50px;
+    margin-left: 20px; 
+    margin-right: 20px;
+  }
+
+  
+  .flap-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+  }
+  
+  .flap-card-front,
+  .flap-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.6s;
+  }
+  
+  .flap-card-front {
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(0deg);
+  }
+  
+  .flap-card-back {
+    background: #ffb5b5;
+    color: #363535;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    transform: rotateY(180deg);
+  }
+  .flap-card-back h3{
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+  }
+  .flap-card-back p{
+     color:rgb(207, 233, 255);
+  }
+  
+  .flap-card:hover .flap-card-front {
+    transform: rotateY(-180deg);
+  }
+  
+  .flap-card:hover .flap-card-back {
+    transform: rotateY(0deg);
+  }
+  
+  #otherContainer{
+    display: flex;
+    flex-direction: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+    margin-left:20px;
+    margin-right:20px;
+}
+  .card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .card-content {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .card-content h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+    color: #666;
+  }
+footer {
+    margin-top: 50px;
+    background-color: #969595;
+    color: #fff;
+    padding:10px;
+    text-align: center;
+}
+
+/* Add CSS for animations here (e.g., background animation) */
+
+
+
